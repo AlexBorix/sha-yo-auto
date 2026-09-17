@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Header.css';
+import logoImg from '../assets/logo.jpeg';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
       <div className="container header-container">
         <div className="header-left">
           <a href="#" className="logo">
-            <img src="/images/logo.jpeg" alt="SHA-YO AUTO" />
+            <img src={logoImg} alt="SHA-YO AUTO" />
           </a>
         </div>
         

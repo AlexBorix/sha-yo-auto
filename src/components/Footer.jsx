@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import './Sections.css';
+import logoImg from '../assets/logo.jpeg';
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className="container">
           <div className="footer-top">
             <a href="#" className="footer-logo">
-              <img src="/images/logo.jpeg" alt="SHA-YO AUTO" />
+              <img src={logoImg} alt="SHA-YO AUTO" />
             </a>
             <div className="social-links">
               <a href="#">Instagram</a>
@@ -19,7 +20,7 @@ export default function Footer() {
           </div>
           <div className="footer-bottom">
             <span>© 2026 SHA-YO AUTO. L'excellence automobile à votre portée.</span>
-            <span>Design by Antigravity Studio</span>
+            <span>Design by Alex</span>
           </div>
         </div>
       </footer>
