@@ -1,0 +1,33 @@
+import React from 'react';
+import { MessageCircle } from 'lucide-react';
+import './Sections.css';
+
+export default function Footer() {
+  return (
+    <>
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-top">
+            <a href="#" className="footer-logo">
+              <img src="/images/logo.jpeg" alt="SHA-YO AUTO" />
+            </a>
+            <div className="social-links">
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <span>© 2026 SHA-YO AUTO. L'excellence automobile à votre portée.</span>
+            <span>Design by Antigravity Studio</span>
+          </div>
+        </div>
+      </footer>
+
+      {/* Bouton WhatsApp Flottant */}
+      <a href="https://wa.me/22600000000" target="_blank" rel="noreferrer" className="whatsapp-float">
+        <MessageCircle size={32} />
+      </a>
+    </>
+  );
+}

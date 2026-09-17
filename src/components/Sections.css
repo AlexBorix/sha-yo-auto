@@ -1,0 +1,304 @@
+/* INTRODUCTION */
+.section-intro {
+  padding: var(--spacing-12) 0;
+  background-color: var(--bg-dark);
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+  align-items: center;
+}
+.intro-text-section {
+  max-width: 500px;
+}
+.intro-text-section p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-top: var(--spacing-3);
+  line-height: 1.8;
+}
+
+/* VEHICULES EN VEDETTE */
+.section-vehicles {
+  padding: var(--spacing-12) 0;
+  background-color: var(--bg-card);
+}
+.vehicles-header {
+  margin-bottom: var(--spacing-8);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+.vehicle-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--bg-dark);
+  cursor: pointer;
+}
+.vehicle-card.featured {
+  grid-column: span 2;
+  height: 600px;
+}
+.vehicle-card:not(.featured) {
+  height: 400px;
+}
+.vehicle-img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.vehicle-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.vehicle-card:hover .vehicle-img-wrapper img {
+  transform: scale(1.05);
+}
+.vehicle-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing-4);
+  background: linear-gradient(to top, rgba(10,10,10,0.95), transparent);
+  transform: translateY(20px);
+  opacity: 0.9;
+  transition: all 0.4s ease;
+}
+.vehicle-card:hover .vehicle-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+.v-meta {
+  display: flex;
+  gap: var(--spacing-3);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-1);
+}
+.v-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.v-price {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--primary-red);
+  margin-top: var(--spacing-2);
+}
+
+/* EXPERIENCE & SERVICES */
+.section-experience {
+  padding: var(--spacing-12) 0;
+  background-color: var(--bg-dark);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-8);
+}
+.exp-step {
+  padding: var(--spacing-4) 0;
+  border-top: 2px solid rgba(255,255,255,0.1);
+  transition: border-color 0.3s ease;
+}
+.exp-step:hover {
+  border-color: var(--primary-red);
+}
+.exp-num {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: rgba(255,255,255,0.1);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--spacing-3);
+  transition: color 0.3s ease;
+}
+.exp-step:hover .exp-num {
+  color: var(--primary-red);
+}
+.exp-step h3 {
+  margin-bottom: var(--spacing-2);
+}
+.exp-step p {
+  color: var(--text-secondary);
+}
+
+/* IMMERSIVE & CTA */
+.section-immersive {
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.section-immersive img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+.section-cta {
+  padding: var(--spacing-12) 0;
+  background-color: var(--bg-card);
+  text-align: center;
+}
+.section-cta h2 {
+  margin-bottom: var(--spacing-4);
+}
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-6);
+}
+
+/* CONTACT & FOOTER */
+.section-contact {
+  padding: var(--spacing-12) 0;
+  background-color: var(--bg-dark);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-8);
+}
+.contact-info {
+  margin-top: var(--spacing-6);
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+  color: var(--text-secondary);
+}
+
+.contact-form {
+  background: var(--bg-card);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-sm);
+}
+.form-group {
+  margin-bottom: var(--spacing-3);
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 16px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.3s ease;
+}
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+}
+
+.footer {
+  background-color: #050505;
+  padding: var(--spacing-8) 0 var(--spacing-4);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+}
+.footer-logo img {
+  height: 48px;
+  /* Rend l'image plus discrète / premium pour le footer */
+  filter: contrast(150%) brightness(80%); 
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: var(--spacing-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.social-links {
+  display: flex;
+  gap: var(--spacing-3);
+}
+.social-links a {
+  color: var(--text-muted);
+}
+.social-links a:hover {
+  color: var(--text-primary);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+@media(max-width: 1024px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.5rem; }
+}
+
+@media(max-width: 768px) {
+  .intro-grid, .vehicles-grid, .exp-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .vehicle-card.featured {
+    height: 400px;
+    grid-column: span 1;
+  }
+  .vehicles-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+  }
+  .footer-top {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    align-items: flex-start;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    text-align: center;
+  }
+}
