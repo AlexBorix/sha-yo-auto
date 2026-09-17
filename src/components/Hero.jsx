@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Hero.css';
-import heroBg from '../assets/back.jpg';
+import heroBg from '../assets/cool.jpg';
 
 export default function Hero() {
   return (
