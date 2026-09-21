@@ -26,7 +26,7 @@ export default function Footer() {
       </footer>
 
       {/* Bouton WhatsApp Flottant */}
-      <a href="https://wa.me/22600000000" target="_blank" rel="noreferrer" className="whatsapp-float">
+      <a href="https://wa.me/22673366464" target="_blank" rel="noreferrer" className="whatsapp-float">
         <MessageCircle size={32} />
       </a>
     </>

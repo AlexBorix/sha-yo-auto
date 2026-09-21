@@ -43,7 +43,7 @@ export default function Biography() {
           </div>
           
           <div className="bio-signature">
-            <h4>Boris Sha-Yo</h4> {/* À ajuster avec le vrai nom */}
+            <h4>PDG Sha-Yo Auto</h4> {/* À ajuster avec le vrai nom */}
             <span>Président Directeur Général</span>
           </div>
         </motion.div>

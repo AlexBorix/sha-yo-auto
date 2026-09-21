@@ -22,8 +22,8 @@ export default function Contact() {
     e.preventDefault();
     
     // Remplacez les 0 par le vrai numéro WhatsApp de l'entreprise (format international sans le +)
-    // Exemple pour le Burkina : "22670000000"
-    const whatsappNumber = "22600000000"; 
+    // Exemple pour le Burkina : "22673366464"
+    const whatsappNumber = "22673366464"; 
     
     const textMessage = `*NOUVELLE DEMANDE - SHA-YO AUTO*\n\n` +
                         `*👤 Nom et Prénom :* ${formData.name}\n` +
@@ -52,15 +52,17 @@ export default function Contact() {
           <div className="contact-info">
             <div className="contact-item">
               <MapPin size={24} color="var(--primary-red)" />
-              <span>Ouagadougou, Burkina Faso</span>
+              <a href="https://maps.app.goo.gl/FAukwLpvHDWg31Br9?g_st=iwb" target="_blank" rel="noreferrer">
+                Ouagadougou, Burkina Faso (Voir sur la carte)
+              </a>
             </div>
             <div className="contact-item">
               <Phone size={24} color="var(--primary-red)" />
-              <span>+226 XX XX XX XX</span>
+              <span>+226 73 36 64 64</span>
             </div>
             <div className="contact-item">
               <Mail size={24} color="var(--primary-red)" />
-              <a href="mailto:contact@shayoauto.com">contact@shayoauto.com</a>
+              <a href="mailto:yochiouedraogo@gmail.com">yochiouedraogo@gmail.com</a>
             </div>
           </div>
         </motion.div>

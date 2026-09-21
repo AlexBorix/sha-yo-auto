@@ -1,30 +1,19 @@
-import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Introduction from './components/Introduction'
-import Biography from './components/Biography'
-import Vehicles from './components/Vehicles'
-import Experience from './components/Experience'
-import Services from './components/Services'
-import Immersive from './components/Immersive'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Home from './components/Home';
+import Catalog from './components/Catalog';
+import Footer from './components/Footer';
 
 function App() {
+  const [page, setPage] = useState('home');
+
   return (
     <>
-      <Header />
-      <Hero />
-      <Introduction />
-      <Biography />
-      <Vehicles />
-      <Experience />
-      <Services />
-      <Immersive />
-      <Contact />
+      <Header setPage={setPage} />
+      {page === 'home' ? <Home setPage={setPage} /> : <Catalog setPage={setPage} />}
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
